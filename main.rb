@@ -1,5 +1,6 @@
 require './computer'
 require './player'
+require './IO_manager'
 
 # create Player's instances. We have two players for the game.
 Player1 = Player.new('Alice', 3, nil)
@@ -29,7 +30,7 @@ loop do
     # logic of ending the game
     next unless Magi.player1.score <= 0 || Magi.player2.score <= 0
 
-    puts '------- Game Over --------'
+    IO_manager.end_msg
     # print winner info
     Magi.get_winner
     return

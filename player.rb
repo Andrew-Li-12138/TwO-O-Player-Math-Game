@@ -10,7 +10,7 @@ class Player
   end
 
   def get_answer
-    self.answer = gets.chomp.to_i
+    self.answer = IO_manager.input
   end
 
   def update_score
@@ -28,9 +28,9 @@ class Player
     player_answer = answer
     correct_answer = computer.number1 + computer.number2
     if player_answer != correct_answer && self.score > 0
-      puts "#{name}: Wrong Answer"
+      IO_manager.wrong_msg(name)
     else
-      puts "#{name}: Good Job"
+      IO_manager.correct_msg(name)
     end
   end
 end
