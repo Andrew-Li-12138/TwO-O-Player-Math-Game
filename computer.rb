@@ -9,7 +9,7 @@ class Computer
     self.number2 = 0
   end
 
-  def ask_question
+  def ask_question 
     self.number1 = rand(1..20)
     self.number2 = rand(1..20)
     puts "#{current_player.name}: what does #{number1} plus #{number2} equal? "
@@ -25,9 +25,9 @@ class Computer
   end
 
   def get_winner
-    if player1.score = 0
+    if player1.score == 0
       puts "#{player2.name} is the winner, and #{player2.name}'s final score is #{player2.score}"
-    elsif Magi.player2.score = 0
+    elsif Magi.player2.score == 0
       puts "#{player1.name} is the winner, and #{player1.name}'s final score is #{player1.score}"
     end
   end
